@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/sistema.js"></script>
+    <script src="js/main.js"></script>
+    <title>Obligatorio AP - N1G</title>
+    <link rel="stylesheet" href="css/style.css">
+     <!-- Agregar favicon -->
+     <link rel="icon" href="logo/logoORT" type="image/x-icon">
+</head>
+<body>
+    <img
+          id="logo"
+          src="logo/logoORT"
+          alt="logo"
+    />
+    <br><br><br><br><br><br> 
+    <br><br><br><br><br><br>
+    <!-- div Inicio de Sesión -->
+    <div id="divInicioSesion" class="ventana" >
+        <h2>Bienvenidos</h2>
+        <h2>Iniciar Sesión</h2>
+    
+        <label for="txtNombreUsuarioIncioSesion">Nombre de Usuario:</label>
+        <input type="text" id="txtNombreUsuarioIncioSesion" placeholder="Nombre de usuario" class="inputMitad" value="perfiladmin.01"><br>
+        
+        <label for="txtContraseniaIncioSesion">Contraseña:</label>
+        <input type="password" id="txtContraseniaIncioSesion" placeholder="Contraseña" class="inputMitad" value="Pass123"><br><br>
+         
+        <input type="button" value="Ingresar" id="btnIngresar" class="inputMitad">
+        
+        <input type="button" value="Registrarse" id="btnRegistrar" class="inputMitad">
+
+        <p id="pResultadoInicioSesion"></p>
+    </div>
+    <!-- div para registro de usuarios -->
+    <div id="divRegistroUsuario" class="ventana">
+        <h2>Registro de Usuario</h2>
+
+        <label for="txtNombre">Ingrese Nombre </label> 
+        <input type="text" id="txtNombre" placeholder="Nombre*" class="inputMitad" ><br>
+        
+        <label for="txtApellido">Ingrese Apellido</label>
+        <input type="text" id="txtApellido" placeholder="Apellido*" class="inputMitad" ><br>
+        
+        <label for="txtNombreUsuario">Ingrese Usuario</label>
+        <input type="text" id="txtNombreUsuario" placeholder="Nombre Usuario*" class="inputMitad"><br>
+        
+        <label for="txtContrasena">Ingrese su Contraseña</label>
+        <input type="password" id="txtContrasena" placeholder="Contraseña*" class="inputMitad"><br>
+        
+        <label>Ingrese el número de su tarjeta</label>
+        <input type="text" id="txtTarjetaCredito" placeholder="Tarjeta*" class="inputMitad"><br>
+        
+        <label>Ingrese su CVC</label>
+        <input type="number" id="codigoSeguridad" placeholder="CVC*" class="inputMitad"><br>
+        
+        <input type="button" value="Registrarme" id="btnRegistrarse" class="inputMitad"><br>
+
+        <p id="pRegistro"></p>
+        
+        <h5>*Todos los campos son obligatorios*</h5>
+    </div>
+    
+    <!-- div para el dashboard de los Admins -->
+    <div id="divDashboardAdmin" class="ventana">       
+        <div>
+            <!-- tabla para la gestión de clientes -->
+            <h2>Clientes</h2>
+    
+           <!--  <label for="txtBusquedaClientes" >Buscar por Estado:</label>
+            <input type="search" id="txtBusquedaClientes"> -->
+        
+            <table border="1" align="left" >
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Estado</th>
+                        <th>Cambiar estado</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios">
+                </tbody>
+            </table><br><br><br><br><br><br><br><br><br>
+            <!-- tabla para el control de stock -->
+            <div id="divControlStock"x|>
+                <h2 >Control de Stock</h2>
+            <table border="1" align="left">
+                <thead>
+                    <tr>
+                        <th>Instancia</th>
+                        <th>Stock Actual</th>
+                        <th>Acción</th>
+                        <th>Boton</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaInstancias">
+
+                </tbody>
+            </table>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <input type="button" id="btnReporteAdmin" value="Ver Reporte">
+            <input type="button" id="btnInstanciasBajar" value="Pendientes de Baja">
+            <input type="button" value="Salir" id="btnLogout"> <br>
+          
+            <p id="pSinStock"></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div id="divDashInstanciasPendientes" class="ventana">
+        <h2>Pendientes de Baja</h2>
+        <table border="1" align="left">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody id="BodyTablaInstanciasPendientes">
+            </tbody>
+        </table><br><br>
+        <input type="button" value="Volver" id="btnVolverDashAdmin"> <br>
+    </div>
+    <br>
+    <br>
+    <div id="divDashboardAdminReport" class="ventana">
+        <h2>Reporte</h2>
+        <table border="1" align="left">
+            <thead>
+                <tr>
+                    <th>Tipo De Instncias</th>
+                    <th>Cantidad</th>
+                    <th>Ingreso Total Actual $</th>
+                </tr>
+            </thead>
+            <tbody id="tablaAdminReporte">
+
+            </tbody>
+        </table><br>
+
+        <label for="pCostoTotalReporteAdmin"></label>
+        <br><br><br><br>
+        <p id="pCostoTotalReporteAdmin"></p>
+    <input type="button" value="Volver" id="btnVolverDashAdmin"> <br> 
+    </div>
+    <!-- div dashboard de clientes -->
+    <div id="divDashboardCliente" class="ventana">
+        
+        <h2>Portal de Instancias para alquilar</h2>
+
+        <label for="txtCostoInstancia">Costo instancia - Precio unitario</label><br><br>
+        <!-- tabla de instancias con precios para poder alquilar -->
+        <table border="1" align="left">
+            <tr>
+                <th>Tipo</th>
+                <th>Precio(usd)</th>
+                <th>Precio encendido(usd)</th>
+            </tr>
+            <tr>
+                <td>c7.small</td>
+                <td>20</td>
+                <td>2.50</td>
+            </tr>
+            <tr>
+                <td>c7.medium</td>
+                <td>30</td>
+                <td>3.50</td>
+            </tr>
+            <tr>
+                <td>c7.large</td>
+                <td>50</td>
+                <td>6</td>
+            </tr>
+        </table><br><br><br><br><br><br><br>
+        
+        <table border="1" align="left">
+            <tr>
+                <th>Tipo</th>
+                <th>Precio(usd)</th>
+                <th>Precio encendido(usd)</th>
+            </tr>
+            <tr>
+                <td>r7.small</td>
+                <td>35</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>r7.medium</td>
+                <td>50</td>
+                <td>6.50</td>
+            </tr>
+            <tr>
+                <td>r7.large</td>
+                <td>60</td>
+                <td>7</td>
+            </tr>
+        </table><br><br><br><br><br><br><br>
+        
+        <table border="1" align="left">
+            <tr>
+                <th>Tipo</th>
+                <th>Precio(usd)</th>
+                <th>Precio encendido(usd)</th>
+            </tr>
+            <tr>
+                <td>i7.medium</td>
+                <td>30</td>
+                <td>3.50</td>
+            </tr>
+            <tr>
+                <td>r7.large</td>
+                <td>50</td>
+                <td>6.50</td>
+            </tr>
+        </table><br><br><br><br><br><br><br>
+        <!-- Select donde el cliente elige el tipo de instancia a alquilar -->
+        <label for="txtInstancia">Tipo de instancia:</label>
+        <select id="slcInstanceType">
+            <optgroup label="Optimizada para computo c7">
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
+            </optgroup>
+            <optgroup label="Optimizada para memoria r7">
+                <option value="4">Small</option>
+                <option value="5">Medium</option>
+                <option value="6">Large</option>
+            </optgroup>
+            <optgroup label="Optimizada para almacenamiento i7">
+                <option value="7">Medium</option>
+                <option value="8">Large</option>
+            </optgroup>
+        </select>
+        <input type="button" id="btnAlquilarInstancia" value="Alquilar"><br>
+        <p id="pStock"></p>
+        <!-- Filtro de instancias encendidas o apagadas -->
+        <h2>Instancias Alquiladas</h2>
+        <select id="slcEstadoInstancias">
+            <option value="Todas">Todas las Instancias</option>
+            <option value="Encendido">Encendidas</option>
+            <option value="Apagado">Apagadas</option>
+        </select>
+        <input type="button" value="Filtrar" id="btnCambiarFiltroInsancias">
+        <br><br>
+        <!-- Listado de instancias alquiladas -->
+        <table border="1" align="left">
+            <thead>
+                <tr>
+                    <th>Instancia</th>
+                    <th>Estado</th>
+                    <th>Veces iniciada</th>
+                    <th>Encender/Apagar</th>
+                </tr>
+            </thead>
+            <tbody id="tablaInstanciasAlquiladas">
+            </tbody>
+        </table><br><br><br><br><br><br><br><br>
+        
+    <div id="divTablaCostoAlquileres">
+        <br>
+        <h2>Reporte de Gastos</h2>
+        <table border="1" align="left">
+            <thead>
+                <tr>
+                    <th>Tipo De Instancia</th>
+                    <th>Costo Por Encendido</th>
+                    <th>Total Veces Encendidas</th>
+                    <th>Costo Total</th>
+                </tr>
+            </thead>
+            <tbody id="tablaCostoInstacias">
+            </tbody>
+        </table>
+    </div>
+    <br><br><br><br>
+    <br><br>
+    <input type="button" value="Salir" id="btnLogoutCliente"> <br> 
+</body>
+</html>

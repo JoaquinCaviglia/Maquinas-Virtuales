@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  
+  .clearfix {
+    display: inline-block;
+  }
+  /* start commented backslash hack \*/
+  
+  * html .clearfix {
+    height: 1%;
+  }
+  
+  .clearfix {
+    display: block;
+  }
+  /* close commented backslash hack */
+  
+  body {
+    font-family: "Roboto Flex", sans-serif;
+    background-color: fafafa;
+    margin: 1;
+    
+  }
+  
+  /* Estilos contenedor de todo el documento */
+  
+  #contenedor {
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+  }
+  
+  /* Estilos contenedor de todo el contenido  */
+  
+  #contenido {
+    padding: 20px;
+    float: left;
+  }
+
+/* Titulos */
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: "Roboto Flex", sans-serif;
+  color: #1b284c;
+}
+
+h2 {
+    font-weight: 800;
+    color: #1b284c;
+    text-transform: uppercase;
+  }
+  
+  h4 {
+    margin-top: 26px;
+    font-weight: 600;
+    color: #c0ca33;
+  }
+
+/* Estilos NAV */
+
+#aux a {
+    color: #002e4a;
+  }
+  #navPrincipal {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    max-width: 400px;
+  }
+  
+  #navPrincipal li {
+    font-family: "Roboto Flex", sans-serif;
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px;
+    float: left;
+  }
+  #logo {
+    padding: 20px;
+    float: left;
+    width: 260px;
+    height: 190px;
+    float: left;
+  }
+  
+  #aux {
+    float: right;
+    clear: right;
+    padding: 0 24px 10px 0;
+  }
+  
+  #navPrincipal a {
+    cursor: pointer;
+    color: #002e4a;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  #aux a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #002e4a;
+    font-size: 16px;
+  }
+  
+  #navPrincipal a:hover {
+    color: #c0ca33;
+  }
+  
+  #cabezal {
+    background-color: #f5f5f7;
+    clear: both;
+    color: fafafa;
+    text-transform: uppercase;
+  }
+
+/* input corto */
+input[type="text"].inputMitad,
+input[type="password"].inputMitad,
+input[type="number"].inputMitad,
+select {
+  margin: 0 10px 10px 0;
+  display: block;
+  width: 15%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: fafafa;
+  background-clip: padding-box;
+  border: 1.5px solid #4a5a70;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* boton */
+input[type="button"], button {
+    background-color: #002e4a;
+    color: #fafafa;
+    border: 1px solid rgb(0, 58, 117);
+    border-radius: 6px;
+    min-width: 74px;
+    height: 35px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+
+  input[type="button"]:hover {
+    background-color: #c0ca33;
+    border: 1px solid #eefe00;
+    color: #fafafa;
+    box-shadow: none;
+    border-radius: 6px;
+    min-width: 74px;
+    height: 35px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  
+  input[type="button"]:disabled {
+    background-color: lightgray;
+  }
+
+  /* Estilos tabla */
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: none;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #fafafa;
+}
+.heading {
+  border-bottom: 1px solid black;
+  background-color: #fafafa;
+  color: #002e4a;
+  font-weight: normal;
+}
+table img,
+td > input[type="button"] {
+  width: 100px;
+  min-width: 50px;
+}
+
+table tr:nth-child(odd) td {
+  background-color: #ececec;
+}
+table tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+#menu {
+    width: 250px; /* Ancho del menú */
+    height: 100vh; /* Altura completa del viewport */
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    position: fixed; /* Fijar posición en la pantalla */
+    left: 0; /* Alinear a la izquierda */
+    top: 0; /* Alinear en la parte superior */
+    padding-top: 60px; /* Espacio para evitar el área ocupada por el encabezado */
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    padding: 15px;
+    border-bottom: 1px solid #555; /* Línea separadora entre elementos del menú */
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
